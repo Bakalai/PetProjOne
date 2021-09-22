@@ -1,191 +1,442 @@
-<!DOCTYPE html>
-<html style="font-size: 16px;">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php   
+use app\assets\AppAsset;
+
+
+
+AppAsset::register($this);
+
+?>
+<?php  $this->beginPage()  ?>
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Блог, Разработчик, программирование">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Melan</title>
     <meta name="description" content="">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Главная страница сайта</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Главная.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 3.25.0, nicepage.com">
-    
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i">
-    
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "images/pngwing.com.png",
-		"sameAs": []
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Главная страница сайта">
-    <meta property="og:type" content="website">
-  </head>
-  <body class="u-body"><header class="u-align-center-sm u-align-center-xs u-clearfix u-header u-section-row-container" id="sec-9d01"><div class="u-section-rows">
-        <div class="u-align-center-sm u-align-center-xs u-clearfix u-grey-25 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-09b1">
-          <div class="u-clearfix u-sheet u-sheet-1">
-            <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1600" data-image-height="1321">
-              <img src="images/pngwing.com.png" class="u-logo-image u-logo-image-1">
-            </a>
-            <div class="u-social-icons u-spacing-10 u-social-icons-1">
-              <a class="u-social-url" target="_blank" title="Telegram" href=""><span class="u-icon u-social-icon u-social-telegram u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cb44"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-cb44"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M18.4,53.2l64.7-24.9c3-1.1,5.6,0.7,4.7,5.3l0,0l-11,51.8c-0.8,3.7-3,4.6-6.1,2.8L53.9,75.8l-8.1,7.8
-	c-0.9,0.9-1.7,1.6-3.4,1.6l1.2-17l31.1-28c1.4-1.2-0.3-1.9-2.1-0.7L34.2,63.7l-16.6-5.2C14,57.4,14,54.9,18.4,53.2L18.4,53.2z"></path></svg></span>
-              </a>
-              <a class="u-social-url" target="_blank" title="Email" href=""><span class="u-icon u-social-email u-social-icon u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8d09"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-8d09"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path id="path3864" fill="#FFFFFF" d="M27.2,28h57.6c4,0,7.2,3.2,7.2,7.2l0,0v42.7c0,3.9-3.2,7.2-7.2,7.2l0,0H27.2
-	c-4,0-7.2-3.2-7.2-7.2V35.2C20,31.1,23.2,28,27.2,28 M56,52.9l28.8-17.8H27.2L56,52.9 M27.2,77.7h57.6V43.5L56,61.3L27.2,43.5V77.7z
-	"></path></svg></span>
-              </a>
-            </div>
-            <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1">
-              <div class="menu-collapse" style="font-size: 1rem;">
-                <a class="u-button-style u-nav-link" href="#">
-                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8a8f"></use></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-8a8f" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
-</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-                </a>
-              </div>
-              <div class="u-custom-menu u-nav-container">
-                <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Главная.html" style="padding: 10px 30px;">Главная</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Проекты.html" style="padding: 10px 30px;">Проекты</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="О-проекте.html" style="padding: 10px 30px;">О проекте</a>
-</li></ul>
-              </div>
-              <div class="u-custom-menu u-nav-container-collapse">
-                <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                  <div class="u-sidenav-overflow">
-                    <div class="u-menu-close"></div>
-                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Главная.html" style="padding: 10px 42px;">Главная</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Проекты.html" style="padding: 10px 42px;">Проекты</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="О-проекте.html" style="padding: 10px 42px;">О проекте</a>
-</li></ul>
-                  </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <?php  $this->head()  ?>
+</head>
+
+<body>
+    <?php  $this->beginBody()  ?>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="index.html">home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">blog</a></li>
+                                                <li><a href="single-blog.html">single-blog</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                 <li><a href="portfolio.html">Portfolio</a></li>
+                                                 <li><a href="elements.html">elements</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="Appointment">
+                                <div class="book_btn d-none d-lg-block">
+                                    <a  href="#">Contact Me</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-              </div>
-            </nav>
-            <h3 class="u-custom-font u-headline u-text u-text-1">
-              <a href="/">Путь самурая</a>
-            </h3>
-          </div>
-          
-          
-          
-          
-          
+            </div>
         </div>
-        <div class="u-custom-color-4 u-section-row u-section-row-2" id="sec-d6e2">
-          <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">
-            <form action="#" method="get" class="u-border-1 u-border-grey-30 u-search u-search-left u-white u-search-1">
-              <button class="u-search-button" type="submit">
-                <span class="u-search-icon u-spacing-10">
-                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-55be"></use></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-55be" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" class="u-svg-content"><path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path></svg>
-                </span>
-              </button>
-              <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
-            </form>
-          </div>
-          
-          
-          
-          
-          
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1">
+            <div class="shap_pattern d-none d-lg-block">
+                <img src="img/about/grid.png" alt="">
+            </div>
+            <div class="social_links">
+                <ul>
+                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-12">
+                        <div class="slider_text text-center">
+                            <h3>
+                                Hello This is Milan
+                            </h3>
+                            <span>Creative Designer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div></header>
-    <section class="u-align-left u-clearfix u-image u-shading u-section-1" src="" data-image-width="1280" data-image-height="850" id="sec-f8d2">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-title u-text-1">блог разработчика </h1>
-        <p class="u-large-text u-text u-text-variant u-text-2">Основной проект, в который будут добавляться дальнейшие наработки</p>
-        <a href="#" class="u-btn u-button-style u-palette-2-base u-btn-1">узнать больше</a>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-section-2" id="carousel_6d25">
-      <div class="u-clearfix u-sheet u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
-        <div class="u-blog u-blog-1">
-          <div class="u-repeater u-repeater-1"><!--blog_post-->
-            <div class="u-blog-post u-container-style u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xs u-container-layout-1">
-                <a class="u-post-header-link" href="blog/пост.html"><!--blog_post_image-->
-                  <img src="images/2.jpeg" alt="" class="u-blog-control u-image u-image-default u-image-1"><!--/blog_post_image-->
-                </a><!--blog_post_header-->
-                <h2 class="u-blog-control u-text u-text-1">
-                  <a class="u-post-header-link" href="blog/пост.html"><!--blog_post_header_content-->Заголовок 1-го поста<!--/blog_post_header_content--></a>
-                </h2><!--/blog_post_header--><!--blog_post_content-->
-                <div class="u-blog-control u-post-content u-text u-text-2"><!--blog_post_content_content-->Пример короткого текста. Lorem ipsum dolor sit amet.<!--/blog_post_content_content--></div><!--/blog_post_content--><!--blog_post_metadata-->
-                <div class="u-blog-control u-metadata u-metadata-1"><!--blog_post_metadata_date-->
-                  <span class="u-meta-date u-meta-icon"><!--blog_post_metadata_date_content-->Tue Sep 21 2021<!--/blog_post_metadata_date_content--></span><!--/blog_post_metadata_date-->
-                </div><!--/blog_post_metadata--><!--blog_post_readmore-->
-                <a href="blog/пост.html" class="u-blog-control u-border-2 u-border-grey-dark-1 u-btn u-btn-rectangle u-button-style u-none u-btn-1"><!--blog_post_readmore_content--><!--options_json--><!--{"content":"Read More"}--><!--/options_json-->Read More<!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
-              </div>
-            </div><!--/blog_post--><!--blog_post-->
-            <div class="u-blog-post u-container-style u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xs u-container-layout-2">
-                <a class="u-post-header-link" href="blog/пост-1.html"><!--blog_post_image-->
-                  <img src="images/3.jpeg" alt="" class="u-blog-control u-image u-image-default u-image-2"><!--/blog_post_image-->
-                </a><!--blog_post_header-->
-                <h2 class="u-blog-control u-text u-text-3">
-                  <a class="u-post-header-link" href="blog/пост-1.html"><!--blog_post_header_content-->Заголовок 2-го поста<!--/blog_post_header_content--></a>
-                </h2><!--/blog_post_header--><!--blog_post_content-->
-                <div class="u-blog-control u-post-content u-text u-text-4"><!--blog_post_content_content-->Пример короткого текста. Lorem ipsum dolor sit amet.<!--/blog_post_content_content--></div><!--/blog_post_content--><!--blog_post_metadata-->
-                <div class="u-blog-control u-metadata u-metadata-2"><!--blog_post_metadata_date-->
-                  <span class="u-meta-date u-meta-icon"><!--blog_post_metadata_date_content-->Tue Sep 21 2021<!--/blog_post_metadata_date_content--></span><!--/blog_post_metadata_date-->
-                </div><!--/blog_post_metadata--><!--blog_post_readmore-->
-                <a href="blog/пост-1.html" class="u-blog-control u-border-2 u-border-grey-dark-1 u-btn u-btn-rectangle u-button-style u-none u-btn-2"><!--blog_post_readmore_content--><!--options_json--><!--{"content":"Read More"}--><!--/options_json-->Read More<!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
-              </div>
-            </div><!--/blog_post--><!--blog_post-->
-            <div class="u-blog-post u-container-style u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xs u-container-layout-3">
-                <a class="u-post-header-link" href="blog/пост-2.html"><!--blog_post_image-->
-                  <img src="images/4.jpeg" alt="" class="u-blog-control u-image u-image-default u-image-3"><!--/blog_post_image-->
-                </a><!--blog_post_header-->
-                <h2 class="u-blog-control u-text u-text-5">
-                  <a class="u-post-header-link" href="blog/пост-2.html"><!--blog_post_header_content-->Заголовок 3-го поста<!--/blog_post_header_content--></a>
-                </h2><!--/blog_post_header--><!--blog_post_content-->
-                <div class="u-blog-control u-post-content u-text u-text-6"><!--blog_post_content_content-->Пример короткого текста. Lorem ipsum dolor sit amet.<!--/blog_post_content_content--></div><!--/blog_post_content--><!--blog_post_metadata-->
-                <div class="u-blog-control u-metadata u-metadata-3"><!--blog_post_metadata_date-->
-                  <span class="u-meta-date u-meta-icon"><!--blog_post_metadata_date_content-->Tue Sep 21 2021<!--/blog_post_metadata_date_content--></span><!--/blog_post_metadata_date-->
-                </div><!--/blog_post_metadata--><!--blog_post_readmore-->
-                <a href="blog/пост-2.html" class="u-blog-control u-border-2 u-border-grey-dark-1 u-btn u-btn-rectangle u-button-style u-none u-btn-3"><!--blog_post_readmore_content--><!--options_json--><!--{"content":"Read More"}--><!--/options_json-->Read More<!--/blog_post_readmore_content--></a><!--/blog_post_readmore-->
-              </div>
-            </div><!--/blog_post-->
-          </div>
-        </div><!--/blog-->
-      </div>
-    </section>
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- service_area  -->
+    <div class="service_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <span>Service Provided</span>
+                        <h3>Build brands campaigns  <br>
+                                & digital projects</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="img/svg_icon/1.svg" alt="">
+                        </div>
+                        <h3>Graphic design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="img/svg_icon/2.svg" alt="">
+                        </div>
+                        <h3>Web design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="img/svg_icon/3.svg" alt="">
+                        </div>
+                        <h3>Mobile app</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ service_area  -->
+
+    <!-- portfolio_area -->
+    <div class="portfolio_area portfolio_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title white_text text-center">
+                        <span>Portfolios</span>
+                        <h3>Some of my awesome <br>
+                                stuffs here</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ portfolio_area -->
+
+    <!-- portfolio_image_area  -->
+    <div class="portfolio_image_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-md-5">
+                    <div class="single_Portfolio">
+                        <div class="portfolio_thumb">
+                            <img src="img/portfolio/1.png" alt="">
+                        </div>
+                        <a href="img/portfolio/1.png" class="popup popup-image"></a>
+                        <div class="portfolio_hover">
+                            <div class="title">
+                                    <h3>Product Design</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-md-7">
+                    <div class="single_Portfolio">
+                        <div class="portfolio_thumb">
+                            <img src="img/portfolio/2.png" alt="">
+                        </div>
+                        <a href="img/portfolio/2.png" class="popup popup-image"></a>
+                        <div class="portfolio_hover">
+                            <div class="title">
+                                    <h3>Product Design</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_Portfolio">
+                        <div class="portfolio_thumb">
+                            <img src="img/portfolio/3.png" alt="">
+                        </div>
+                        <a href="img/portfolio/3.png" class="popup popup-image"></a>
+                        <div class="portfolio_hover">
+                            <div class="title">
+                                    <h3>Product Design</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_Portfolio">
+                        <div class="portfolio_thumb">
+                            <img src="img/portfolio/4.png" alt="">
+                        </div>
+                        <a href="img/portfolio/4.png" class="popup popup-image"></a>
+                        <div class="portfolio_hover">
+                            <div class="title">
+                                    <h3>Product Design</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12 col-lg-4">
+                    <div class="single_Portfolio">
+                        <div class="portfolio_thumb">
+                            <img src="img/portfolio/5.png" alt="">
+                        </div>
+                        <a href="img/portfolio/5.png" class="popup popup-image"></a>
+                        <div class="portfolio_hover">
+                            <div class="title">
+                                    <h3>Product Design</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="more_portfolio text-center">
+                        <a class="line_btn" href="#">More Folio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ portfolio_image_area  -->
+
+    <!-- about_me  -->
+    <div class="about_me">
+        <div class="about_large_title d-none d-lg-block">
+                About
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-md-6">
+                    <div class="about_e_details">
+                        <h3>About me</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida Risus com odo viverra maecenas.</p>
+                        <div class="download_cv">
+                            <a class="boxed-btn3" href="#">Download CV</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="about_img">
+                        <div class="color_pattern d-none d-lg-block">
+                            <img src="img/about/color_grid.png" alt="">
+                        </div>
+                        <div class="my_Pic">
+                                <img src="img/about/about.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ about_me  -->
+
+    <div class="counter_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_counter text-center">
+                        <h3>
+                            <span class="counter" >520 </span><span>+</span>
+                        </h3>
+                        <p>Total Projects</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_counter text-center">
+                        <h3>
+                            <span class="counter">244 </span>
+                        </h3>
+                        <p>On Going Projects</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_counter text-center">
+                        <h3>
+                            <span class="counter" >95 </span> <span>%</span>
+                        </h3>
+                        <p>Job Success</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial_area  -->
+    <div class="testimonial_area ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="testmonial_active owl-carousel">
+                            <div class="single_carousel">
+                                    <div class="single_testmonial text-center">
+                                            <div class="quote">
+                                                <img src="img/testmonial/quote.svg" alt="">
+                                            </div>
+                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
+                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
+                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
+                                            <div class="testmonial_author">
+                                                <div class="thumb">
+                                                        <img src="img/testmonial/thumb.png" alt="">
+                                                </div>
+                                                <h3>Robert Thomson</h3>
+                                                <span>Business Owner</span>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="single_carousel">
+                                    <div class="single_testmonial text-center">
+                                            <div class="quote">
+                                                <img src="img/testmonial/quote.svg" alt="">
+                                            </div>
+                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
+                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
+                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
+                                            <div class="testmonial_author">
+                                                <div class="thumb">
+                                                        <img src="img/testmonial/thumb.png" alt="">
+                                                </div>
+                                                <h3>Robert Thomson</h3>
+                                                <span>Business Owner</span>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="single_carousel">
+                                    <div class="single_testmonial text-center">
+                                            <div class="quote">
+                                                <img src="img/testmonial/quote.svg" alt="">
+                                            </div>
+                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
+                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
+                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
+                                            <div class="testmonial_author">
+                                                <div class="thumb">
+                                                        <img src="img/testmonial/thumb.png" alt="">
+                                                </div>
+                                                <h3>Robert Thomson</h3>
+                                                <span>Business Owner</span>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /testimonial_area  -->
     
-    
-    <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-grey-80" id="sec-e31e"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1600" data-image-height="1321">
-          <img src="images/pngwing.com.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <div class="u-social-icons u-spacing-10 u-social-icons-1">
-          <a class="u-social-url" target="_blank" title="Telegram" href=""><span class="u-icon u-social-icon u-social-telegram u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d23"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-1d23"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M18.4,53.2l64.7-24.9c3-1.1,5.6,0.7,4.7,5.3l0,0l-11,51.8c-0.8,3.7-3,4.6-6.1,2.8L53.9,75.8l-8.1,7.8
-	c-0.9,0.9-1.7,1.6-3.4,1.6l1.2-17l31.1-28c1.4-1.2-0.3-1.9-2.1-0.7L34.2,63.7l-16.6-5.2C14,57.4,14,54.9,18.4,53.2L18.4,53.2z"></path></svg></span>
-          </a>
-          <a class="u-social-url" target="_blank" title="Email" href=""><span class="u-icon u-social-email u-social-icon u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bb1b"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-bb1b"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path id="path3864" fill="#FFFFFF" d="M27.2,28h57.6c4,0,7.2,3.2,7.2,7.2l0,0v42.7c0,3.9-3.2,7.2-7.2,7.2l0,0H27.2
-	c-4,0-7.2-3.2-7.2-7.2V35.2C20,31.1,23.2,28,27.2,28 M56,52.9l28.8-17.8H27.2L56,52.9 M27.2,77.7h57.6V43.5L56,61.3L27.2,43.5V77.7z
-	"></path></svg></span>
-          </a>
+    <div class="discuss_projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="project_text text-center">
+                        <h3>Let’s discuss for a project</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                        <a class="boxed-btn3" href="#">Start Talking</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="u-text u-text-1">Подвал сайта, сюда я что-нибудь да добавлю...</p>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="https://nicepage.com/" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
-  </body>
+    </div>
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="menu_links">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                        <div class="socail_links">
+                            <ul>
+                                <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+                                <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/ footer end  -->
+
+<?php $this->endBody() ?>    
+</body>
+
 </html>
+<?php $this->endPage() ?>
