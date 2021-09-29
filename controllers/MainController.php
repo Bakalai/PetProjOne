@@ -2,19 +2,18 @@
 
 namespace app\controllers;
 
-use Yii;
-use yii\filters\AccessControl;
+
+use app\models\Post;
 use yii\web\Controller;
-use yii\web\Response;
-use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
+
 
 class MainController extends Controller
 {
 	public function actionIndex()
 	{
-		return $this->render('index');
+	    $posts = Post::find()->all();
+
+		return $this->render('index', compact('posts'));
 	}
 
 }

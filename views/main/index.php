@@ -4,6 +4,13 @@
 
 $this->title = Yii::$app->name;
 ?>
+
+
+<?php
+//if (!empty($posts)) {
+//    var_dump($posts);
+//}
+?>
     <!-- slider_area_start -->
     <div class="slider_area">
         <div class="single_slider  d-flex align-items-center slider_bg_1">
@@ -22,9 +29,9 @@ $this->title = Yii::$app->name;
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
                             <h3>
-                                Hello This is Milan
+                               Дарова ебать! Я ЕГОР
                             </h3>
-                            <span>Creative Designer</span>
+                            <span>WEB-backend разработчик</span>
                         </div>
                     </div>
                 </div>
@@ -51,7 +58,7 @@ $this->title = Yii::$app->name;
                         <div class="icon">
                             <img src="img/svg_icon/1.svg" alt="">
                         </div>
-                        <h3>Graphic design</h3>
+                        <h3>Нихуя</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
                     </div>
                 </div>
@@ -60,7 +67,7 @@ $this->title = Yii::$app->name;
                         <div class="icon">
                             <img src="img/svg_icon/2.svg" alt="">
                         </div>
-                        <h3>Web design</h3>
+                        <h3>Читаю мангу</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
                     </div>
                 </div>
@@ -69,7 +76,8 @@ $this->title = Yii::$app->name;
                         <div class="icon">
                             <img src="img/svg_icon/3.svg" alt="">
                         </div>
-                        <h3>Mobile app</h3>
+                        <h3>Смотрю АНИМЕ</h3>
+                      
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
                     </div>
                 </div>
@@ -212,7 +220,7 @@ $this->title = Yii::$app->name;
                 <div class="col-xl-4 col-md-4">
                     <div class="single_counter text-center">
                         <h3>
-                            <span class="counter" >520 </span><span>+</span>
+                            <span class="counter" >3 </span><span>+</span>
                         </h3>
                         <p>Total Projects</p>
                     </div>
@@ -220,7 +228,7 @@ $this->title = Yii::$app->name;
                 <div class="col-xl-4 col-md-4">
                     <div class="single_counter text-center">
                         <h3>
-                            <span class="counter">244 </span>
+                            <span class="counter">2 </span>
                         </h3>
                         <p>On Going Projects</p>
                     </div>

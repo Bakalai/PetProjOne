@@ -2,8 +2,15 @@
 namespace app\models;
 
 
-class Post extends \yii\base\BaseObject
+use yii\db\ActiveRecord;
+
+class Post extends ActiveRecord
 {
+    public static function tableName()
+    {
+        return 'post';
+    }
+
 
 }
 
