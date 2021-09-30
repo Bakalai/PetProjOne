@@ -44,31 +44,12 @@ AppAsset::register($this);
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                 <li><a href="portfolio.html">Portfolio</a></li>
-                                                 <li><a href="elements.html">elements</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a class="active" href="index.html">Главная</a></li>
+                                        <li><a href="about.php">Обо мне</a></li>
+                                        <li><a href="#">Блог</a>
+                                        <li><a href="contact.html">Контакты</a></li>
                                     </ul>
                                 </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                            <div class="Appointment">
-                                <div class="book_btn d-none d-lg-block">
-                                    <a  href="#">Contact Me</a>
-                                </div>
                             </div>
                         </div>
                         <div class="col-12">
@@ -92,9 +73,10 @@ AppAsset::register($this);
                     <div class="col-xl-6 col-md-6">
                         <div class="menu_links">
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="about.html">Обо мне</a></li>   
+                                <li><a href="#">Блог</a>
+                                <li><a href="contact.html">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
