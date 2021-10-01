@@ -21,7 +21,7 @@ $this->title = Yii::$app->name;
             <div class="social_links">
                 <ul>
                     <li><a href="https://vk.com/inugami_bakalai"> <i class="fa fa-vk"></i> </a></li>
-                    <li><a href="https://vk.com/inugami_bakalai"> <i class="fa fa-telegram "></i> </a></li>
+                    <li><a href="https://t.me/inugami_bakalai"> <i class="fa fa-telegram "></i> </a></li>
                     <li><a href="https://www.instagram.com/inugami_bakalai"> <i class="fa fa-instagram"></i> </a></li>
                 </ul>
             </div>
