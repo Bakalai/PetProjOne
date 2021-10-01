@@ -64,7 +64,7 @@ $this->title = Yii::$app->name;
             <div class="row">
                 <?php if (!empty($posts)){
                 foreach ($posts as $post): ?>
-                <div class="col-xl-5 col-md-5">
+                <div class="col-xl-6  col-md-8">
                     <div class="single_Portfolio">
                         <div class="portfolio_thumb">
                             <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $post->img ).'"/>'?>
