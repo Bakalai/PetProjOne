@@ -20,9 +20,9 @@ $this->title = Yii::$app->name;
             </div>
             <div class="social_links">
                 <ul>
-                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+                    <li><a href="https://vk.com/inugami_bakalai"> <i class="fa fa-vk"></i> </a></li>
+                    <li><a href="https://vk.com/inugami_bakalai"> <i class="fa fa-telegram "></i> </a></li>
+                    <li><a href="https://www.instagram.com/inugami_bakalai"> <i class="fa fa-instagram"></i> </a></li>
                 </ul>
             </div>
             <div class="container">

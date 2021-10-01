@@ -83,10 +83,10 @@ AppAsset::register($this);
                     <div class="col-xl-6 col-md-6">
                         <div class="socail_links">
                             <ul>
-                                <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
+                                <li><a href="https://vk.com/inugami_bakalai"> <i class="fa fa-vk"></i> </a></li>
+                                <li><a href="https://t.me/inugami_bakalai"> <i class="fa fa-telegram"></i> </a></li>
+                                <li><a href="https://www.instagram.com/inugami_bakalai"> <i class="fa fa-instagram"></i> </a></li>
+
                             </ul>
                         </div>
                     </div>
