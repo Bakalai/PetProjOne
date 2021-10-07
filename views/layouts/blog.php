@@ -23,9 +23,6 @@ AppAsset::register($this);
 
 <body>
     <?php  $this->beginBody()  ?>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
     <!-- header-start -->
     <header>
@@ -35,7 +32,7 @@ AppAsset::register($this);
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-2">
                             <div class="logo">
-                                <a href="index.php">
+                                <a href="/">
                                     <img src="img/logo.png" alt="">
                                 </a>
                             </div>
@@ -45,7 +42,7 @@ AppAsset::register($this);
                                 <nav>
                                     <ul id="navigation">
                                         <li><a class="active" href="index.html">Главная</a></li>
-                                        <li><a href="about.php">Обо мне</a></li>
+                                        <li><a href="/about.php">Обо мне</a></li>
                                         <li><a href="#">Блог</a>
                                         <li><a href="contact.html">Контакты</a></li>
                                     </ul>
