@@ -16,4 +16,9 @@ class MainController extends Controller
 		return $this->render('index', compact('posts'));
 	}
 
+	public function  actionAbout() {
+
+	    return $this->render('about');
+
+    }
 }

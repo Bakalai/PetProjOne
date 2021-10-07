@@ -30,9 +30,9 @@ $this->title = Yii::$app->name;
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
                             <h3>
-                               Егорушка
+                               PetProjOne
                             </h3>
-                            <span>WEB-backend разработчик</span>
+                            <span>блог или портфолио</span>
                         </div>
                     </div>
                 </div>

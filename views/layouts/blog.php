@@ -41,7 +41,7 @@ AppAsset::register($this);
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">Главная</a></li>
+                                        <li><a class="active" href="/main/index">Главная</a></li>
                                         <li><a href="/about.php">Обо мне</a></li>
                                         <li><a href="#">Блог</a>
                                         <li><a href="contact.html">Контакты</a></li>
