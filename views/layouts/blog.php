@@ -32,7 +32,7 @@ AppAsset::register($this);
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-2">
                             <div class="logo">
-                                <a href="/">
+                                <a href="#">
                                     <img src="img/logo.png" alt="">
                                 </a>
                             </div>
@@ -41,10 +41,10 @@ AppAsset::register($this);
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="/main/index">Главная</a></li>
-                                        <li><a href="/about.php">Обо мне</a></li>
+                                        <li><a class="active" href="http://petprojone/web/index.php?r=main/index">Главная</a></li>
+                                        <li><a href="http://petprojone/web/index.php?r=main/about">Обо мне</a></li>
                                         <li><a href="#">Блог</a>
-                                        <li><a href="contact.html">Контакты</a></li>
+                                        <li><a href="#">Контакты</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -70,10 +70,10 @@ AppAsset::register($this);
                     <div class="col-xl-6 col-md-6">
                         <div class="menu_links">
                             <ul>
-                                <li><a href="index.html">Главная</a></li>
-                                <li><a href="about.html">Обо мне</a></li>   
+                                <li><a href="http://petprojone/web/index.php?r=main/index">Главная</a></li>
+                                <li><a href="http://petprojone/web/index.php?r=main/about">Обо мне</a></li>
                                 <li><a href="#">Блог</a>
-                                <li><a href="contact.html">Контакты</a></li>
+                                <li><a href="#">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
