@@ -2,7 +2,6 @@
 
 /* @var $this yii\web\View */
 
-$this->title = Yii::$app->name;
 ?>
 
 <!-- bradcam_area  -->
