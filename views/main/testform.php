@@ -1,6 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
+
+use  yii\bootstrap4\ActiveForm;
 ?>
 <!-- bradcam_area  -->
 <div class="bradcam_area bradcam_bg_1">
@@ -20,8 +22,20 @@
     <div class="container">
         <div class="row">
             <div class="xl col-12">
+                <?php  $form = ActiveForm::begin() ?>
 
-               <?php VarDumper($model) ?>
+                    <?= $form->field($model, 'title')->textInput() ?>
+                    <?= $form->field($model, 'content')->textarea() ?>
+                    <?= $form->field($model, 'img')->fileInput() ?>
+                    <?= $form->field($model, 'created_at') ?>
+                    <?= $form->field($model, 'keywords')->textInput() ?>
+                    <?= $form->field($model, 'description')->textInput() ?>
+
+                    <div class="form-group">
+                        <?= \yii\bootstrap4\Html::submitButton('Отправить', ['class' => 'btn btn-default' ]) ?>
+                    </div>
+
+               <?php  ActiveForm::end() ?>
 
             </div>
         </div>
