@@ -6,10 +6,15 @@ use yii\base\Model;
 
 class PostForm extends Model
 {
-    public static function tableName()
-    {
-        return 'post';
-    }
+
+    public $title;
+    public $content;
+    public $img;
+    public $created_at;
+    public $keywords;
+    public $description;
+
+
 
 
 }

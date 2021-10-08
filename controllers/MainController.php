@@ -4,6 +4,7 @@ namespace app\controllers;
 
 
 use app\models\Post;
+use app\models\PostForm;
 
 
 class MainController extends AppController
@@ -26,7 +27,9 @@ class MainController extends AppController
     public function actionTestform(){
 
 	    $this->view->title = "Тест форм";
-	    return $this->render('testform');
+	    $model = new PostForm();
+
+	    return $this->render('testform', compact('model'));
 
 
     }

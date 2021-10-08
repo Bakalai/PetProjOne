@@ -20,7 +20,9 @@
     <div class="container">
         <div class="row">
             <div class="xl col-12">
-                <p>форма</p>
+
+               <?php VarDumper($model) ?>
+
             </div>
         </div>
     </div>
