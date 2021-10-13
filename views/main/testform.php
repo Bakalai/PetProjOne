@@ -2,7 +2,8 @@
 
 /* @var $this yii\web\View */
 
-use  yii\bootstrap4\ActiveForm;
+use  yii\widgets\ActiveForm;
+
 ?>
 <!-- bradcam_area  -->
 <div class="bradcam_area bradcam_bg_1">
@@ -22,17 +23,25 @@ use  yii\bootstrap4\ActiveForm;
     <div class="container">
         <div class="row">
             <div class="xl col-12">
-                <?php  $form = ActiveForm::begin() ?>
+                <?php  $form = ActiveForm::begin([
+                        'id' => 'first-form',
+                        'options'=> [
+                                'class' => 'form-horizontal'
+                        ]
+                ]) ?>
 
-                    <?= $form->field($model, 'title')->textInput() ?>
-                    <?= $form->field($model, 'content')->textarea() ?>
+                    <?= $form->field($model, 'title',
+                    [
+                        'template'=>"{label} \n <div class='col-md-5'>{input} </div> \n <div class='col-md-5'> {hint} </div> \n <div class='col-md-5'>{error}</div>"
+                    ])->textInput([ 'maxLength'=> 50]) ?>
+                    <?= $form->field($model, 'content')->textarea([ 'minLength'=>15, 'maxLength'=> 5000, 'rows'=>'6']) ?>
                     <?= $form->field($model, 'img')->fileInput() ?>
-                    <?= $form->field($model, 'created_at') ?>
-                    <?= $form->field($model, 'keywords')->textInput() ?>
-                    <?= $form->field($model, 'description')->textInput() ?>
+                    <?= $form->field($model, 'created_at')->Input('text') ?>
+                    <?= $form->field($model, 'keywords')->textInput([ 'minLength'=>3, 'maxLength'=> 200]) ?>
+                    <?= $form->field($model, 'description')->textInput([ 'minLength'=>5, 'maxLength'=> 500]) ?>
 
                     <div class="form-group">
-                        <?= \yii\bootstrap4\Html::submitButton('Отправить', ['class' => 'btn btn-default' ]) ?>
+                        <?= \yii\helpers\Html::submitButton('Отправить', ['class' => 'btn btn-default' ]) ?>
                     </div>
 
                <?php  ActiveForm::end() ?>
