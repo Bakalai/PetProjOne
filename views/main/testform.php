@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-use  yii\widgets\ActiveForm;
+use  yii\bootstrap4\ActiveForm;
 
 ?>
 <!-- bradcam_area  -->
@@ -25,23 +25,31 @@ use  yii\widgets\ActiveForm;
             <div class="xl col-12">
                 <?php  $form = ActiveForm::begin([
                         'id' => 'first-form',
-                        'options'=> [
-                                'class' => 'form-horizontal'
-                        ]
+                        'layout' => 'horizontal',
+                        'fieldConfig'=> [
+                                'template' => "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
+                            'horizontalCssClasses'=> [
+                                'label' => 'col-sm-2',
+                                'offset'=>'offset-sm-2',
+                                'wrapper'=>'col-sm-10',
+                                'error'=>'',
+                                'hint'=>'',
+                            ],
+                        ],
                 ]) ?>
 
-                    <?= $form->field($model, 'title',
-                    [
-                        'template'=>"{label} \n <div class='col-md-5'>{input} </div> \n <div class='col-md-5'> {hint} </div> \n <div class='col-md-5'>{error}</div>"
-                    ])->textInput([ 'maxLength'=> 50]) ?>
-                    <?= $form->field($model, 'content')->textarea([ 'minLength'=>15, 'maxLength'=> 5000, 'rows'=>'6']) ?>
-                    <?= $form->field($model, 'img')->fileInput() ?>
-                    <?= $form->field($model, 'created_at')->Input('text') ?>
-                    <?= $form->field($model, 'keywords')->textInput([ 'minLength'=>3, 'maxLength'=> 200]) ?>
-                    <?= $form->field($model, 'description')->textInput([ 'minLength'=>5, 'maxLength'=> 500]) ?>
+                    <?= $form->field($model, 'title')->textInput([ 'maxLength'=> 50, 'placeholder'=>'Введите заголовок']) ?>
+                    <?= $form->field($model, 'content')->textarea([ 'minLength'=>15, 'maxLength'=> 5000, 'rows'=>'6', 'placeholder'=>'Введите текст']) ?>
+                    <?= $form->field($model, 'img')->fileInput([ 'placeholder'=>'Загрузите изображение']) ?>
+                    <?= $form->field($model, 'created_at')->textInput() ?>
+                    <?= $form->field($model, 'keywords')->textInput([ 'minLength'=>3, 'maxLength'=> 200, 'placeholder'=>'Ключевые слова']) ?>
+                    <?= $form->field($model, 'description')->textInput([ 'minLength'=>5, 'maxLength'=> 500, 'placeholder'=>'Описание...']) ?>
 
                     <div class="form-group">
-                        <?= \yii\helpers\Html::submitButton('Отправить', ['class' => 'btn btn-default' ]) ?>
+                        <div class="col-md-5 col-md-offset-2">
+                            <?= \yii\helpers\Html::submitButton('Отправить', ['class' => 'btn btn-default' ]) ?>
+                        </div>
+
                     </div>
 
                <?php  ActiveForm::end() ?>

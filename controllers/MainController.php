@@ -7,6 +7,7 @@ use app\models\Post;
 use app\models\PostForm;
 
 
+
 class MainController extends AppController
 {
 	public function actionIndex()
@@ -28,6 +29,12 @@ class MainController extends AppController
 
 	    $this->view->title = "Тест форм";
 	    $model = new PostForm();
+	    if ($model->load(\Yii::$app->request->post() && $model->validate())) {
+	        \Yii::$app->session->setFlash('success', 'Всё хорошо');
+	        return $this->refresh();
+        } else {
+            \Yii::$app->session->setFlash('danger', 'Не очень хорошо');
+        }
 
 	    return $this->render('testform', compact('model'));
 
