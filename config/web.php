@@ -21,6 +21,12 @@ $config = [
             'cookieValidationKey' => 'YLK9HPP5dzxSZy-Emv_hlaze8pmtG2ME',
             //'baseUrl' => '',
         ],
+//        'assetManager' => [
+//            'bundles' => [
+//                'sourcePath' => null,   // не опубликовывать комплект
+//                'js' => []
+//            ],
+//        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -55,7 +61,7 @@ $config = [
             'rules' => [
             ],
         ],
-        
+
 
     ],
     'params' => $params,
