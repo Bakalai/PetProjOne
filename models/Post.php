@@ -20,13 +20,12 @@ class Post extends ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'content', 'created_at','keywords', 'description'], 'required'],
-            ['title', 'string', 'length' =>[5,50]],
-            [['content'],'string', 'length' => [15, 5000]],
-            [['img'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
-            ['created_at', 'string', 'length' => [3, 200]],
-            ['keywords', 'string', 'length' => [3, 200]],
-            ['description','string', 'length' => [5,500]]
+            [['title', 'content','keywords', 'description'], 'required'],
+            ['title', 'string'],
+            [['content'],'string'],
+            [['img'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
+            ['keywords', 'string'],
+            ['description','string']
 
         ];
     }
@@ -36,7 +35,6 @@ class Post extends ActiveRecord
             'title'=>'Заголовок',
             'content'=>'Текст статьи',
             'img'=>'Главное изображение',
-            'created_at'=>'Дата публикации',
             'keywords'=>'Ключвевые слова',
             'description'=>'Описание статьи'
         ];

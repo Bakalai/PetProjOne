@@ -46,20 +46,14 @@ class MainController extends AppController
 
         $post = new Post();
 
-        $post->title = 'ssadsasad';
-        $post->content = 'ssadsasadssadsasad';
-        $post->img = '';
-        $post->created_at =  date('Y-m-d H:i:s');
-        $post->keywords = 'ssadsasadssadsasad';
-        $post->description = 'ssadsasadssadsasad';
+        if($post->load(\Yii::$app->request->post()) && $post->save()) {
 
-        if($post->save()){
             \Yii::$app->session->setFlash('success', 'OK');
-        } else {
-            \Yii::$app->session->setFlash('error', 'not OK');
+            return $this->refresh();
         }
 
-        return $this->render('test/create');
+
+        return $this->render('test/create', compact('post'));
     }
 
 }
