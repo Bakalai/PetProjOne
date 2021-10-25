@@ -4,13 +4,13 @@ namespace app\controllers;
 
 
 use app\models\Post;
-use app\models\PostForm;
+
 
 
 
 class MainController extends AppController
 {
-	public function actionIndex()
+	public function actionIndex()           //read
 	{
 	    $posts = Post::find()->all();
         $this->view->registerMetaTag(['name'=>'description', 'content'=>'блог разработчика, первый проект, главная страница'], 'description');
@@ -25,10 +25,10 @@ class MainController extends AppController
 	    return $this->render('about');
 
     }
-    public function actionTestform(){
+    public function actionForm(){
 
 	    $this->view->title = "Тест форм";
-	    $model = new PostForm();
+	    $model = new Post();
 	    if ($model->load(\Yii::$app->request->post() && $model->validate())) {
 	        \Yii::$app->session->setFlash('success', 'Всё хорошо');
 	        return $this->refresh();
@@ -36,8 +36,30 @@ class MainController extends AppController
             \Yii::$app->session->setFlash('danger', 'Не очень хорошо');
         }
 
-	    return $this->render('testform', compact('model'));
+	    return $this->render('test/form', compact('model'));
 
 
+	}
+	public function actionCreate(){     //create
+
+        $this->view->title = "Create from CRUD";
+
+        $post = new Post();
+
+        $post->title = 'ssadsasad';
+        $post->content = 'ssadsasadssadsasad';
+        $post->img = '';
+        $post->created_at =  date('Y-m-d H:i:s');
+        $post->keywords = 'ssadsasadssadsasad';
+        $post->description = 'ssadsasadssadsasad';
+
+        if($post->save()){
+            \Yii::$app->session->setFlash('success', 'OK');
+        } else {
+            \Yii::$app->session->setFlash('error', 'not OK');
+        }
+
+        return $this->render('test/create');
     }
+
 }
