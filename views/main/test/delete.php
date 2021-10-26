@@ -1,23 +1,18 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $name string */
-/* @var $message string */
-/* @var $exception Exception */
 
+use  yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
 
-$this->title = $name;
 ?>
-
-
 <!-- bradcam_area  -->
 <div class="bradcam_area bradcam_bg_1">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="bradcam_text text-center">
-                    <h3><?= Html::encode($this->title)  ?> </h3>
+                    <h3><?= $this->title ?> </h3>
                 </div>
             </div>
         </div>
@@ -30,17 +25,7 @@ $this->title = $name;
         <div class="row">
             <div class="xl col-12">
 
-
-                <div class="alert alert-danger">
-                    <?= nl2br(Html::encode($message)) ?>
-                </div>
-
-                <p>
-                    The above error occurred while the Web server was processing your request.
-                </p>
-                <p>
-                    Please contact us if you think this is a server error. Thank you.
-                </p>
+                <?php include __DIR__. "/flash.php"; ?>
 
 
             </div>

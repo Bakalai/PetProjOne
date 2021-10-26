@@ -4,13 +4,26 @@ namespace app\controllers;
 
 
 use app\models\Post;
-
-
+use yii\helpers\VarDumper;
+use yii\web\NotFoundHttpException;
 
 
 class MainController extends AppController
 {
-	public function actionIndex()           //read
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
+        ];
+    }
+
+    public function actionIndex()           //read
 	{
 	    $posts = Post::find()->all();
         $this->view->registerMetaTag(['name'=>'description', 'content'=>'блог разработчика, первый проект, главная страница'], 'description');
@@ -28,15 +41,19 @@ class MainController extends AppController
     public function actionForm(){
 
 	    $this->view->title = "Тест форм";
-	    $model = new Post();
-	    if ($model->load(\Yii::$app->request->post() && $model->validate())) {
-	        \Yii::$app->session->setFlash('success', 'Всё хорошо');
-	        return $this->refresh();
-        } else {
-            \Yii::$app->session->setFlash('danger', 'Не очень хорошо');
+        $post = new Post();
+        if($post->load(\Yii::$app->request->post())) {
+
+            if($post->save()) {
+                \Yii::$app->session->setFlash('success', 'OK');
+            } else {
+                \Yii::$app->session->setFlash('error', 'хуево OK?');
+            }
+            return $this->refresh();
+
         }
 
-	    return $this->render('test/form', compact('model'));
+	    return $this->render('test/form', compact('$post'));
 
 
 	}
@@ -56,4 +73,46 @@ class MainController extends AppController
         return $this->render('test/create', compact('post'));
     }
 
+    public function actionUpdate()
+    {
+        $this->view->title = "Update from CRUD";
+
+        $post = Post::findOne('1');
+        if (!$post){
+            throw new NotFoundHttpException('ID not found');
+        }
+        if($post->load(\Yii::$app->request->post())) {
+
+            if($post->save()) {
+                \Yii::$app->session->setFlash('success', 'Шалость удалась');
+            } else {
+                \Yii::$app->session->setFlash('error', 'хуево OK?');
+            }
+            return $this->refresh();
+
+        }
+
+        return $this->render('test/update', compact('post'));
+    }
+
+    public function actionDelete($id=''){
+        $this->view->title = "Delete from CRUD";
+
+        $post = Post::findOne($id);
+        if ($post){
+            if (false !== $post->delete())
+            {
+                \Yii::$app->session->setFlash('success', 'Успешно удалили');
+            } else {
+                \Yii::$app->session->setFlash('error', 'хуево OK?');
+            }
+
+        } else {
+            \Yii::$app->session->setFlash('success', $id.' не найден, либо пуст');
+            //throw new NotFoundHttpException('ID not found');
+        }
+
+
+        return $this->render('test/delete', compact('post'));
+    }
 }
