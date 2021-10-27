@@ -28,10 +28,12 @@ use yii\helpers\Html;
                 <?php include __DIR__. "/flash.php"; ?>
 
 
-                    <h3> <?= $product->title ?> </h3>
-                    <p>Стоимость: <?= $product->price ?></p>
-                    <p>Производитель: <?= $product->category->title ?></p>
+                <h3> <?= $category->title ?> </h3>
+                <?php  foreach ($category->products as $product):  ?>
+                    <p>Модель: <?= $product->title ?></p>
+                    <p>Стоимость: <?= $product->title ?></p>
                     <hr>
+                <?php  endforeach;  ?>
 
 
 
