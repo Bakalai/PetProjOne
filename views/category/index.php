@@ -29,7 +29,7 @@ use yii\helpers\Html;
                 <?php foreach ($categories as $category): ?>
                     <h3> <?= $category->title ?> </h3>
                     <?php foreach ($category->products as $product): ?>
-                        <p><?= $product->title ?></p>
+                        <p><?= $product->title ?> || Стоимость: <?= $product->price ?></p>
                     <?php endforeach;  ?>
                 <?php endforeach;  ?>
 

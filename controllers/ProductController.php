@@ -13,7 +13,7 @@ class ProductController extends AppController
     public function actionIndex()
     {
         $this->view->title = 'Продукты и их категории';
-        $products = Product::find()->all();
+        $products = Product::find()->with('category')->all();
 
 
        return $this->render('index', compact('products'));

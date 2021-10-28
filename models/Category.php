@@ -13,9 +13,11 @@ class Category extends ActiveRecord
         return "{{categories}}";
     }
 
-    public function getProducts()
+    public function getProducts($price = 1000)
     {
-        return $this->hasMany(Product::class, ['category_id'=>'id']);
+        return $this->hasMany(Product::class, ['category_id'=>'id'])
+            ->orderBy('price DESC')
+            ->where('price< :price' , [':price' => $price] );
     }
 
 }

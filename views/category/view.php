@@ -29,9 +29,10 @@ use yii\helpers\Html;
 
 
                 <h3> <?= $category->title ?> </h3>
-                <?php  foreach ($category->products as $product):  ?>
+                <hr><hr>
+                <?php  foreach ($products as $product):  ?>
                     <p>Модель: <?= $product->title ?></p>
-                    <p>Стоимость: <?= $product->title ?></p>
+                    <p>Стоимость: <?= $product->price ?></p>
                     <hr>
                 <?php  endforeach;  ?>
 

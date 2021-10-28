@@ -17,9 +17,10 @@ class CategoryController extends AppController
         return $this->render('index', compact('categories') );
     }
 
-    public function actionView($id = null)
+    public function actionView($id = null, $price = 1000)
     {
-        $category= Category::findOne($id);
+        $category = Category::findOne($id);
+        $products = $category->getProducts($price)->all();
         if (!$category) {
             throw new NotFoundHttpException('ID not found');
         }  else {
@@ -28,7 +29,7 @@ class CategoryController extends AppController
         }
 
 
-        return $this->render('view', compact('category'));
+        return $this->render('view', compact('category', 'products'));
     }
 
 
