@@ -23,8 +23,17 @@ use  yii\bootstrap4\ActiveForm;
     <div class="container">
         <div class="row">
             <div class="xl col-12">
+                <?php // include __DIR__.'/flash.php' ?>
+                <?=  \app\widgets\Alert::widget()   ?>
+                <?php \app\components\HelloWidget::begin(['message' => 'господь']) ?>
+
+                    <h1>Контент</h1>
+
+
+                <?php \app\components\HelloWidget::end() ?>
                 <?php  $form = ActiveForm::begin([
                         'id' => 'first-form',
+                        'enableClientValidation' =>false,
                         'layout' => 'horizontal',
                         'fieldConfig'=> [
                                 'template' => "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
@@ -38,12 +47,10 @@ use  yii\bootstrap4\ActiveForm;
                         ],
                 ]) ?>
 
-                    <?= $form->field($model, 'title')->textInput([ 'maxLength'=> 50, 'placeholder'=>'Введите заголовок']) ?>
-                    <?= $form->field($model, 'content')->textarea([ 'minLength'=>15, 'maxLength'=> 5000, 'rows'=>'6', 'placeholder'=>'Введите текст']) ?>
-                    <?= $form->field($model, 'img')->fileInput([ 'placeholder'=>'Загрузите изображение']) ?>
-                    <?= $form->field($model, 'created_at')->textInput() ?>
-                    <?= $form->field($model, 'keywords')->textInput([ 'minLength'=>3, 'maxLength'=> 200, 'placeholder'=>'Ключевые слова']) ?>
-                    <?= $form->field($model, 'description')->textInput([ 'minLength'=>5, 'maxLength'=> 500, 'placeholder'=>'Описание...']) ?>
+                    <?= $form->field($post, 'title')->textInput([ 'maxLength'=> 50, 'placeholder'=>'Введите заголовок']) ?>
+                    <?= $form->field($post, 'content')->textarea([ 'minLength'=>15, 'maxLength'=> 5000, 'rows'=>'6', 'placeholder'=>'Введите текст']) ?>
+                    <?= $form->field($post, 'keywords')->textInput([ 'minLength'=>3, 'maxLength'=> 200, 'placeholder'=>'Ключевые слова']) ?>
+                    <?= $form->field($post, 'description')->textInput([ 'minLength'=>5, 'maxLength'=> 500, 'placeholder'=>'Описание...']) ?>
 
                     <div class="form-group">
                         <div class="col-md-5 col-md-offset-2">

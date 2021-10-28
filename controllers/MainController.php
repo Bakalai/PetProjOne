@@ -38,9 +38,26 @@ class MainController extends AppController
 	    return $this->render('about');
 
     }
-    public function actionForm(){
+    public function actionForm($alert = ''){
 
 	    $this->view->title = "Тест форм";
+	    switch ($alert){
+            case 'error':
+                \Yii::$app->session->setFlash('error', 'switch error');
+                break;
+            case 'success':
+                \Yii::$app->session->setFlash('success', 'alert success');
+                break;
+            case 'info':
+                \Yii::$app->session->setFlash('info', 'alert info');
+                break;
+            case 'warning':
+                \Yii::$app->session->setFlash('warning', 'alert warning');
+                break;
+//            default:
+//                \Yii::$app->session->setFlash('danger', 'switch danger');
+//                break;
+        }
         $post = new Post();
         if($post->load(\Yii::$app->request->post())) {
 
@@ -53,7 +70,7 @@ class MainController extends AppController
 
         }
 
-	    return $this->render('test/form', compact('$post'));
+	    return $this->render('test/form', compact('post'));
 
 
 	}
