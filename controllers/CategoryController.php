@@ -17,14 +17,14 @@ class CategoryController extends AppController
         return $this->render('index', compact('categories') );
     }
 
-    public function actionView($id = null, $price = 1000)
+    public function actionView($alias = null, $price = 1000)
     {
-        $category = Category::findOne($id);
-        $products = $category->getProducts($price)->all();
-        if (!$category) {
-            throw new NotFoundHttpException('ID not found');
-        }  else {
+        $category = Category::findOne(['alias' => $alias]);
 
+        if (!$category) {
+            throw new NotFoundHttpException('Категория '. $alias . ' not found');
+        }  else {
+            $products = $category->getProducts($price)->all();
             $this->view->title = "Одна категория: {$category->title}";
         }
 

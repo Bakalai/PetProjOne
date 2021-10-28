@@ -19,7 +19,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'YLK9HPP5dzxSZy-Emv_hlaze8pmtG2ME',
-            //'baseUrl' => '',
+            'baseUrl' => '',
         ],
 //        'assetManager' => [
 //            'bundles' => [
@@ -56,9 +56,14 @@ $config = [
         'db' => $db,
 
         'urlManager' => [
-            'enablePrettyUrl' => false,
-            'showScriptName' => true,
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+
             'rules' => [
+                'product' => 'product/index',
+                'product/<id:\d+>' => 'product/view/',
+                'category' => 'category/index',
+                'category/<alias>' => 'category/view/'
             ],
         ],
 
